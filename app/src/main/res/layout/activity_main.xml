@@ -6,32 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <include
+    <FrameLayout
         android:id="@+id/leftFrame"
-        layout="@layout/left_fragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="208dp"
+        android:layout_height="715dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightFrame"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+         />
 
-    </include>
-
-    <include
+    <FrameLayout
         android:id="@+id/rightFrame"
-        layout="@layout/right_fragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toEndOf="@+id/leftFrame"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0"
+         />
 
-    </include>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,26 +5,22 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    //FragmentManager fragmentManager;
-   // FragmentTransaction fragmentTransaction;
+public class MainActivity extends AppCompatActivity implements Left_Fragement.LeftFragmentLister {
+    FragmentManager fragmentManager;
+   FragmentTransaction fragmentTransaction;
     TextView descTv;
-    //ImageView iv1,iv2,iv3,iv4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        descTv=(TextView) findViewById(R.id.descriptionTxt);
-
-        //addFragment();
-
+        addFragment();
     }
-   /* public void addFragment(){
+    public void addFragment(){
         fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
 
@@ -35,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.rightFrame,right_fragment);
 
         fragmentTransaction.commit();
-    }*/
+    }
 
-    public void fun1(View view) {
+   /* public void fun1(View view) {
         descTv.setText("Image name:\n"+view.getResources().getResourceName(R.id.image1)+"\n"+ "Image type:"+view.getResources().getResourceTypeName(R.id.image1));
     }
     public void fun2(View view) {
@@ -48,9 +44,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void fun4(View view) {
         descTv.setText("Image name:\n"+view.getResources().getResourceName(R.id.image4)+"\n"+ "Image type:"+view.getResources().getResourceTypeName(R.id.image1));
+    }*/
+
+    @Override
+    public void createDescription(String msg) {
+        Log.e("Wapp","createDescription");
+        Right_Fragment right_fragment = (Right_Fragment) getSupportFragmentManager().findFragmentById(R.id.rightFrame);
+        if(right_fragment!=null)
+        right_fragment.setDescription(msg);
+
     }
-
-
-
-
 }
