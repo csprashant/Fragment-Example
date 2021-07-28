@@ -8,8 +8,8 @@
 
     <FrameLayout
         android:id="@+id/leftFrame"
-        android:layout_width="206dp"
-        android:layout_height="0dp"
+        android:layout_width="381dp"
+        android:layout_height="0"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

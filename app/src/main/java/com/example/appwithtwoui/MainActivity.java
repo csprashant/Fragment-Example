@@ -32,20 +32,6 @@ public class MainActivity extends AppCompatActivity implements Left_Fragement.Le
 
         fragmentTransaction.commit();
     }
-
-   /* public void fun1(View view) {
-        descTv.setText("Image name:\n"+view.getResources().getResourceName(R.id.image1)+"\n"+ "Image type:"+view.getResources().getResourceTypeName(R.id.image1));
-    }
-    public void fun2(View view) {
-        descTv.setText("Image name:\n"+view.getResources().getResourceName(R.id.image2)+"\n"+ "Image type:"+view.getResources().getResourceTypeName(R.id.image1));
-    }
-    public void fun3(View view) {
-        descTv.setText("Image name:\n"+view.getResources().getResourceName(R.id.image3)+"\n"+ "Image type:"+view.getResources().getResourceTypeName(R.id.image1));
-    }
-    public void fun4(View view) {
-        descTv.setText("Image name:\n"+view.getResources().getResourceName(R.id.image4)+"\n"+ "Image type:"+view.getResources().getResourceTypeName(R.id.image1));
-    }*/
-
     @Override
     public void createDescription(String msg) {
         Log.e("Wapp","createDescription");
